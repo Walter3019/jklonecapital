@@ -1,0 +1,2 @@
+# jklonecapital
+static website

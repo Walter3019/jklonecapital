@@ -1,7 +1,15 @@
 const path = require('path');
 
 exports.home = (req, res) => {
-  const { lan } = req.query;
+
+  let lan;
+
+  if (req.query.lan == undefined) {
+    lan = 'en'
+  } else {
+    lan = req.query.lan;
+  }
+
   const title = {
     en: 'main page',
     zh: '首页'
@@ -11,7 +19,13 @@ exports.home = (req, res) => {
 }
 
 exports.about = (req, res) => {
-  const { lan } = req.query;
+  let lan;
+
+  if (req.query.lan == undefined) {
+    lan = 'en'
+  } else {
+    lan = req.query.lan;
+  }
   const title = {
     en: 'about',
     zh: '关于'
@@ -20,7 +34,13 @@ exports.about = (req, res) => {
 }
 
 exports.contact = (req, res) => {
-  const { lan } = req.query;
+  let lan;
+
+  if (req.query.lan == undefined) {
+    lan = 'en'
+  } else {
+    lan = req.query.lan;
+  }
   const title = {
     en: 'Contact',
     zh: '联系我们'
@@ -29,7 +49,13 @@ exports.contact = (req, res) => {
 }
 
 exports.joinUs = (req, res) => {
-  const { lan } = req.query;
+  let lan;
+
+  if (req.query.lan == undefined) {
+    lan = 'en'
+  } else {
+    lan = req.query.lan;
+  }
   const title = {
     en: 'Join Us',
     zh: '加入我们'
@@ -38,7 +64,13 @@ exports.joinUs = (req, res) => {
 }
 
 exports.team = (req, res) => {
-  const { lan } = req.query;
+  let lan;
+
+  if (req.query.lan == undefined) {
+    lan = 'en'
+  } else {
+    lan = req.query.lan;
+  }
   const title = {
     en: 'Team',
     zh: '我们的团队'

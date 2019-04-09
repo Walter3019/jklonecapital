@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {{if language == 'en'}}
+  {{if lan == 'en'}}
   <title>{{ title.en }}</title>
-  {{else if language == 'zh'}}
+  {{else if lan == 'zh'}}
   <title>{{ title.zh }}</title>
   {{/if}}
   <link rel="stylesheet" href="/public/css/bootstrap.min.css">
@@ -30,6 +30,9 @@
       </div>
     </div>
   </header>
+
+  <a href="/home?lan=zh">中文</a>
+  <a href="/home?lan=en">English</a>
   {{block 'body'}}
   {{/block}}
 

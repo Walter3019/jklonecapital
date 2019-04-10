@@ -1,0 +1,104 @@
+/* temp css change */
+
+body {
+  background: lightblue;
+}
+
+/* .row {
+  border: 1px solid red;
+} */
+
+.home_firstRow {
+  padding-top: 10px;
+}
+
+.home_secondRow {
+  margin-top: 35px;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.2);
+  height: 150px;
+}
+
+/*  */
+.home_contactInfo,
+.home_social {
+  color: #e3ded8;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.home_contactInfo {
+  float: left;
+}
+
+.home_social {
+  float: right;
+}
+
+/* contactInfo */
+.home_contactInfo i {
+  margin-right: 10px;
+}
+
+.home_contactInfo span {
+  margin-right: 22px;
+}
+
+/* social */
+.home_social {
+  text-align: right;
+}
+
+.home_social a {
+  color: #e3ded8;
+}
+
+.home_logo {
+  float: left;
+}
+
+.nav {
+  float: right;
+
+}
+
+.nav .home_navlist li {
+  float: left;
+  list-style: none;
+  margin-right: 10px;
+}
+
+/* footer */
+footer {
+  height: 72px;
+  background: #121313;
+}
+
+footer .col {
+  height: 72px;
+  line-height: 72px;
+  color: #e3ded8;
+}
+
+footer .col a {
+  color: #e3ded8;
+  text-decoration: none;
+}
+
+.home_footer_social a:nth-of-type(1) {
+  margin-right: 10px;
+}
+
+footer .col a:hover {
+  color: #09c1c1;
+}
+
+footer .home_copyright {
+  float: left;
+}
+
+footer .home_footer_social {
+  float: right
+}

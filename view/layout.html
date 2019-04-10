@@ -21,20 +21,79 @@
 <body>
   <header>
     <div class="container">
-      <div class="row">
-        <i class="fas fa-mobile-alt"></i><span>+1416-939-7790</span>
-        <i class="fas fa-envelope"></i><span></span>
+      <div class="row home_firstRow">
+        <div class="col">
+          <div class="home_contactInfo">
+            <i class="fas fa-mobile-alt"></i><span>+1416-939-7790</span>
+            <i class="fas fa-envelope"></i><span>info@jklonecapital.com</span>
+          </div>
+          <div class="home_social">
+            <a href="javascript:;"><i class="fab fa-twitter"></i></a>
+            <a href="javascript:;"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <div class="logo"></div>
+      <div class="row home_secondRow">
+        <div class="col">
+          <div class="home_logo">
+            <a href="javascript:;">
+              <img src="/public/image/logo_white.png" alt="">
+            </a>
+          </div>
+          <div class="nav">
+            <ul class="home_navlist">
+              {{if lan == 'en'}}
+              {{each navList}}
+              {{if $value.url == 'lan'}}
+              <li>
+                <a href="/{{$value.url}}">{{$value.en}}</a>
+                <a href="/{{$value.url}}">{{$value.zh}}</a>
+              </li>
+              {{else if $value.url != 'lan'}}
+              <li>
+                <a href="/{{$value.url}}">{{$value.en}}</a>
+              </li>
+              {{/if}}
+              {{/each}}
+              {{else if lan == 'zh'}}
+              {{each navList}}
+              {{if $value.url == 'lan'}}
+              <li>
+                <a href="/{{$value.url}}">{{$value.en}}</a>
+                <a href="/{{$value.url}}">{{$value.zh}}</a>
+              </li>
+              {{else if $value.url != 'lan'}}
+              <li>
+                <a href="/{{$value.url}}">{{$value.zh}}</a>
+              </li>
+              {{/if}}
+              {{/each}}
+              {{/if}}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <a href="/home?lan=zh">中文</a>
-  <a href="/home?lan=en">English</a>
   {{block 'body'}}
   {{/block}}
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="home_copyright">
+            <p><a href="javascript">Paretone Capital</a> © 2016</p>
+          </div>
+          <div class="home_footer_social">
+            <a href="javascript:;"><i class="fab fa-twitter"></i></a>
+            <a href="javascript:;"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="/public/lib/Jquery/jquery.min.js"></script>
   {{block 'js'}}

@@ -9,4 +9,6 @@ router.get('/contact', controller.contact);
 router.get('/joinus', controller.joinUs);
 router.get('/team', controller.team);
 
+router.get('/switchLan', controller.switchLan);
+
 module.exports = router;

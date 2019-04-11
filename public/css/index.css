@@ -18,7 +18,7 @@ body {
 
 header {
   background: rgba(255, 255, 255, 0.2);
-  height: 150px;
+  height: 130px;
 }
 
 /*  */
@@ -64,10 +64,42 @@ header {
 
 }
 
+.home_navlist {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  line-height: 50px;
+}
+
 .nav .home_navlist li {
+  position: relative;
   float: left;
   list-style: none;
-  margin-right: 10px;
+  margin-right: 30px;
+}
+
+.nav .home_navlist a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #09c1c1;
+  height: 2px;
+  width: 100%;
+  display: none;
+}
+
+.nav .home_navlist li:hover a::after {
+  display: block;
+}
+
+.nav .home_navlist li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav .home_navlist li a:hover {
+  color: #09c1c1;
 }
 
 /* footer */

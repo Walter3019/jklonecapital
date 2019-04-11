@@ -46,8 +46,11 @@
               {{each navList}}
               {{if $value.url == 'lan'}}
               <li>
-                <a href="/{{$value.url}}">{{$value.en}}</a>
-                <a href="/{{$value.url}}">{{$value.zh}}</a>
+                <a href="/{{$value.url}}">{{$value.en}} <i class="fas fa-chevron-down"></i></a>
+                <div style="display: none;">
+                  <a href="/{{$value.url}}">{{$value.en}}</a>
+                  <a href="/{{$value.url}}">{{$value.zh}}</a>
+                </div>
               </li>
               {{else if $value.url != 'lan'}}
               <li>
@@ -59,8 +62,11 @@
               {{each navList}}
               {{if $value.url == 'lan'}}
               <li>
-                <a href="/{{$value.url}}">{{$value.en}}</a>
-                <a href="/{{$value.url}}">{{$value.zh}}</a>
+                <a href="/{{$value.url}}">{{$value.zh}} <i class="fas fa-chevron-down"></i></a>
+                <div style="display: none;">
+                  <a href="/{{$value.url}}">{{$value.en}}</a>
+                  <a href="/{{$value.url}}">{{$value.zh}}</a>
+                </div>
               </li>
               {{else if $value.url != 'lan'}}
               <li>
@@ -69,6 +75,7 @@
               {{/if}}
               {{/each}}
               {{/if}}
+              <li><a href="javascript:;"><i class="fas fa-search"></i></a></li>
             </ul>
           </div>
         </div>

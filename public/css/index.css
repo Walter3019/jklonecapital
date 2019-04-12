@@ -10,15 +10,20 @@ body {
 
 .home_firstRow {
   padding-top: 10px;
+  transition: all 0.5s
 }
 
 .home_secondRow {
-  margin-top: 35px;
+  margin-top: 15px;
+  height: 68px;
 }
 
 header {
   background: rgba(255, 255, 255, 0.2);
-  height: 130px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.3s ease-out, line-height 0.5s ease-out
 }
 
 /*  */
@@ -56,19 +61,20 @@ header {
 }
 
 .home_logo {
+  padding-top: 7px;
   float: left;
 }
 
 .nav {
   float: right;
-
+  height: 100%;
 }
 
 .home_navlist {
   margin: 0;
   padding: 0;
-  height: 50px;
-  line-height: 50px;
+  height: 100%;
+  line-height: 68px;
 }
 
 .nav .home_navlist li {
@@ -76,6 +82,7 @@ header {
   float: left;
   list-style: none;
   margin-right: 30px;
+  height: 100%;
 }
 
 .nav .home_navlist a:after {
@@ -87,6 +94,7 @@ header {
   height: 2px;
   width: 100%;
   display: none;
+  transition: all 0.5s;
 }
 
 .nav .home_navlist li:hover a::after {
@@ -99,7 +107,36 @@ header {
 }
 
 .nav .home_navlist li a:hover {
-  color: #09c1c1;
+  color: #09c1c1 !important;
+}
+
+.nav .home_navlist div {
+  position: absolute;
+  bottom: -65px;
+  left: 0px;
+  line-height: 33px;
+  width: 130px;
+  border-top: 2px solid #09c1c1;
+}
+
+.nav .home_navlist div span {
+  display: block;
+  color: #fff;
+  width: 130px;
+  height: 33px;
+  padding-left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.nav .home_navlist div span:hover {
+  display: block;
+  background: #09c1c1;
+  cursor: pointer;
+}
+
+.nav .home_navlist div span i {
+  font-size: 12px;
+  margin-right: 5px;
 }
 
 /* footer */

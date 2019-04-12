@@ -45,11 +45,11 @@
               {{if lan == 'en'}}
               {{each navList}}
               {{if $value.url == 'lan'}}
-              <li>
-                <a href="/{{$value.url}}">{{$value.en}} <i class="fas fa-chevron-down"></i></a>
+              <li id="home_lan">
+                <a href="javascript:;">{{$value.en}} <i class="fas fa-chevron-down"></i></a>
                 <div style="display: none;">
-                  <a href="/{{$value.url}}">{{$value.en}}</a>
-                  <a href="/{{$value.url}}">{{$value.zh}}</a>
+                  <span><i class="fas fa-chevron-right" style="display:none;"></i>{{$value.en}}</span>
+                  <span><i class="fas fa-chevron-right" style="display:none;"></i>{{$value.zh}}</span>
                 </div>
               </li>
               {{else if $value.url != 'lan'}}
@@ -61,8 +61,8 @@
               {{else if lan == 'zh'}}
               {{each navList}}
               {{if $value.url == 'lan'}}
-              <li>
-                <a href="/{{$value.url}}">{{$value.zh}} <i class="fas fa-chevron-down"></i></a>
+              <li id="home_lan">
+                <a href="javascript:;">{{$value.zh}} <i class="fas fa-chevron-down"></i></a>
                 <div style="display: none;">
                   <a href="/{{$value.url}}">{{$value.en}}</a>
                   <a href="/{{$value.url}}">{{$value.zh}}</a>
@@ -103,6 +103,7 @@
   </footer>
 
   <script src="/public/lib/Jquery/jquery.min.js"></script>
+  <script src="/public/js/index.js"></script>
   {{block 'js'}}
   {{/block}}
 </body>
